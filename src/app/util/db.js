@@ -20,7 +20,19 @@ export const user = [
   {
     id: 4,
     name: "Nikhil",
-    age: 25,
+    age: 26,
     email: "nikhil@gmail.com",
+  },
+  {
+    id: 5,
+    name: "Aryan",
+    age: 22,
+    email: "aryan@gmail.com",
+  },
+  {
+    id: 6,
+    name: "Dushyant",
+    age: 23,
+    email: "dushyant@gmail.com",
   },
 ];
