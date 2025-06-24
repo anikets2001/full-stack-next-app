@@ -1,0 +1,16 @@
+.usersWrapper {
+    padding: 24px;
+}
+
+.usersWrapper li {
+    list-style-type: none;
+}
+
+.listItemWrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.field {
+    font-weight: 600;
+}
