@@ -9,7 +9,7 @@ async function getUsers(userId) {
 }
 
 const UserDetail = async ({ params }) => {
-  const { userId } = params; // ✅ fix here
+  const { userId } = params;
 
   const user = await getUsers(userId);
   const { name, age, email } = user[0];

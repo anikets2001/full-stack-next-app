@@ -11,7 +11,6 @@ async function getUsers() {
 
 const UsersList = async () => {
   const users = await getUsers();
-  console.log("users", users);
 
   return (
     <div className={style.usersWrapper}>
@@ -19,9 +18,10 @@ const UsersList = async () => {
         <div key={user?.id}>
           <li>
             <div className={style.listItemWrapper}>
-              <p className={style.field}>Name:</p>{" "}
+              <p className={style.field}>Name:</p>
               <Link href={`/users/${user.id}`}>{user?.name}</Link>
-            </div>  
+              <Link href={`/users/${user.id}/update`}>Edit</Link>
+            </div>
           </li>
         </div>
       ))}
