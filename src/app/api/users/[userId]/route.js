@@ -26,3 +26,19 @@ export async function PUT(request, context) {
 
   return NextResponse.json({ result: "User updated" }, { status: 200 });
 }
+
+export function DELETE(request, context) {
+  const id = context.params.userId;
+
+  if (id) {
+    return NextResponse.json(
+      { error: "User Deleted successfully", success: true },
+      { status: 200 }
+    );
+  }
+
+  return NextResponse.json(
+    { result: "Internal server error, please try again later", success: false },
+    { status: 400 }
+  );
+}

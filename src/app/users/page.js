@@ -1,5 +1,6 @@
 import Link from "next/link";
 import style from "./users.module.css";
+import DeleteUser from "./DeleteUser";
 
 const apiUrl = "http://localhost:3000/api/users";
 
@@ -19,8 +20,9 @@ const UsersList = async () => {
           <li>
             <div className={style.listItemWrapper}>
               <p className={style.field}>Name:</p>
-              <Link href={`/users/${user.id}`}>{user?.name}</Link>
-              <Link href={`/users/${user.id}/update`}>Edit</Link>
+              <Link href={`/users/${user?.id}`}>{user?.name}</Link>
+              <Link href={`/users/${user?.id}/update`}>Edit</Link>
+              <DeleteUser id={user?.id} />
             </div>
           </li>
         </div>
